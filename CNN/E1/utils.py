@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 def softmax(x):
     return np.exp(x) / np.sum(np.exp(x), axis=0)
 
-
 def cross_entropy(x):
     return -np.log(x)
 
@@ -20,7 +19,6 @@ def relu(x):
 
 def leaky_relu(x, alpha=0.001):
     return x * alpha if x < 0 else x
-
 
 def leaky_relu_derivative(x, alpha=0.01):
     return alpha if x < 0 else 1
